@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.holela.Controller.EditText_OpenSans_Regular
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100dp"
+        android:id="@+id/what"
+        android:textSize="@dimen/_15dp"
+        android:paddingLeft="@dimen/_5dp"
+        android:layout_margin="@dimen/_7dp"
+        android:background="@drawable/edboder"
+        android:gravity="top"
+        android:cursorVisible="true"
+        android:hint="@string/whats"
+        />
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linearLayout">
+
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bottom_blue"
+                app:tabMode="fixed" />
+        </LinearLayout>
+
+
+</RelativeLayout>

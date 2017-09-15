@@ -1,0 +1,297 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.holela.Fragment.EditProfile">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--   <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:id="@+id/back"
+            android:src="@drawable/back"
+
+            />-->
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:src="@drawable/cancel"
+            android:textColor="@color/colorPrimary" />
+
+
+        <ImageView
+            android:id="@+id/save"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginRight="@dimen/_260dp"
+            android:src="@drawable/check"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:theme="@style/AppTheme.WhiteAccent"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileimage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80dp"
+                android:layout_marginTop="@dimen/_20dp" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:gravity="center"
+            android:text="@string/EditProfile"
+            android:textColor="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_5dp"
+                android:gravity="right"
+                android:paddingTop="@dimen/_1dp"
+                android:text="Name" />
+
+            <com.holela.Controller.Edittext_open_semi_bold
+                android:id="@+id/profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10dp"
+                android:cursorVisible="true"
+                android:gravity="right"
+                android:hint="@string/Enter_Usename"
+                android:paddingTop="@dimen/_1dp"
+                android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_5dp"
+                android:gravity="right"
+                android:paddingTop="@dimen/_1dp"
+                android:text="Mobile Number" />
+
+            <com.holela.Controller.Edittext_open_semi_bold
+                android:id="@+id/profilemobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10dp"
+                android:cursorVisible="true"
+                android:gravity="right"
+                android:hint="@string/Enter_mobile"
+                android:paddingTop="@dimen/_1dp"
+                android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_5dp"
+                android:gravity="right"
+                android:paddingTop="@dimen/_1dp"
+                android:text="E-Mail Address" />
+
+            <com.holela.Controller.Edittext_open_semi_bold
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10dp"
+                android:cursorVisible="true"
+                android:gravity="right"
+                android:hint="@string/Enter_email"
+                android:paddingTop="@dimen/_1dp"
+                android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_5dp"
+                android:gravity="right"
+                android:paddingTop="@dimen/_1dp"
+                android:text="@string/bio" />
+
+            <com.holela.Controller.Edittext_open_semi_bold
+                android:id="@+id/bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10dp"
+                android:cursorVisible="true"
+                android:gravity="right"
+                android:hint="@string/bio"
+                android:paddingTop="@dimen/_1dp"
+                android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_weight="3"
+                android:background="@color/phone_email"
+                android:gravity="center">
+
+
+                <com.holela.Controller.Edittext_open_semi_bold
+                    android:id="@+id/profile_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:hint="@string/Enter_Usename"
+                    android:paddingLeft="@dimen/_10dp"
+                    android:paddingTop="@dimen/_1dp"
+                    android:textSize="@dimen/_12sp" />
+            </RelativeLayout>
+        </LinearLayout>-->
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_12dp"
+             android:layout_marginRight="@dimen/_20dp"
+             android:layout_marginTop="@dimen/_15dp"
+             android:orientation="horizontal">
+
+
+             <RelativeLayout
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/_15dp"
+                 android:layout_weight="3"
+                 android:background="@color/phone_email"
+                 android:gravity="center">
+
+
+                 <com.holela.Controller.Edittext_open_semi_bold
+                     android:id="@+id/profilemobile"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_margin="@dimen/_10dp"
+                     android:background="@android:color/transparent"
+                     android:cursorVisible="true"
+                     android:gravity="center"
+                     android:hint="@string/Enter_mobile"
+                     android:paddingLeft="@dimen/_10dp"
+                     android:paddingTop="@dimen/_1dp"
+                     android:textSize="@dimen/_12sp" />
+             </RelativeLayout>
+         </LinearLayout>-->
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_weight="3"
+                android:background="@color/phone_email"
+                android:gravity="center">
+
+
+                <com.holela.Controller.Edittext_open_semi_bold
+                    android:id="@+id/profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:hint="@string/Enter_email"
+                    android:paddingLeft="@dimen/_10dp"
+                    android:paddingTop="@dimen/_1dp"
+                    android:textSize="@dimen/_12sp" />
+            </RelativeLayout>
+        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>

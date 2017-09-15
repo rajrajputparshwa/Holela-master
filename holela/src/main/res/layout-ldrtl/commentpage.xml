@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:background="@drawable/messages_sepeator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.holela.Controller.Textview_Bold
+            android:id="@+id/usernamettext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#58595b"
+            android:layout_marginRight="@dimen/_5dp"
+            android:textSize="@dimen/_15dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/commenttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#58595b"
+            android:textSize="@dimen/_10dp" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/messages_sepeator" />
+
+</LinearLayout>

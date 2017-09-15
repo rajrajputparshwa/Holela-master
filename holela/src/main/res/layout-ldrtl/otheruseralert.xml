@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="@dimen/_300dp"
+              android:layout_marginRight="@dimen/_25dp"
+              android:layout_marginLeft="@dimen/_25dp"
+>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary">
+
+
+            <com.holela.Controller.Textview_open_regular
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/_15dp"
+                    android:layout_margin="@dimen/_5dp"
+                    android:id="@+id/block"
+                    android:gravity="center"
+                    android:textColor="@color/White"
+                    android:text="@string/block"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <com.holela.Controller.Textview_open_regular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/_15dp"
+                android:gravity="center"
+                android:id="@+id/cancel"
+                android:background="@drawable/corner"
+                android:layout_marginTop="@dimen/_10dp"
+                android:padding="@dimen/_5dp"
+                android:textColor="@color/White"
+                android:text="@string/Cancel"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

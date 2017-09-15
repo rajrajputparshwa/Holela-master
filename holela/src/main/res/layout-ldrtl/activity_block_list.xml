@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_privacy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.holela.Activity.Privacy">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:rotation="+180"
+        android:src="@drawable/back" />
+
+    <com.holela.Controller.Textview
+        android:id="@+id/blocklist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7dp"
+        android:layout_toLeftOf="@+id/back"
+        android:text="@string/blocklist"
+        android:textColor="@color/phone_email"
+        android:textSize="@dimen/_25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blocklist"
+        android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/listblock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null">
+
+        </ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>

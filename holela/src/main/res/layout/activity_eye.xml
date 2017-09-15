@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.holela.Activity.Eye">
+
+
+    <io.github.rockerhieu.emojicon.EmojiconEditText
+        android:id="@+id/what"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_7dp"
+        android:layout_marginRight="@dimen/_7dp"
+        android:layout_marginBottom="@dimen/_7dp"
+        android:background="@drawable/edboder"
+        android:cursorVisible="true"
+        android:gravity="top"
+        android:hint="@string/whats"
+        android:paddingLeft="@dimen/_5dp"
+        android:textSize="@dimen/_15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/what">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/AppTheme.WhiteAccent"
+            android:visibility="gone" />
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                    <ImageView
+                        android:id="@+id/postimg1"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="@dimen/_150dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:scaleType="fitXY"
+
+                         />
+
+                    <ImageView
+                        android:id="@+id/close1"
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:src="@drawable/new_close"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <ImageView
+                        android:id="@+id/postimg2"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="@dimen/_150dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/close2"
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:src="@drawable/new_close"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/postimg3"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="@dimen/_150dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:visibility="gone"
+                        android:scaleType="fitXY" />
+                    <ImageView
+                        android:id="@+id/close3"
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:src="@drawable/new_close"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/postimg4"
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="@dimen/_150dp"
+                        android:layout_margin="@dimen/_5dp"
+                        android:visibility="gone"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/close4"
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:src="@drawable/new_close"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/progresslinerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/video_post"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:theme="@style/AppTheme.WhiteAccent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Uploading File " />
+
+
+            <TextView
+                android:id="@+id/textss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statusssss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+
+    <VideoView
+        android:id="@+id/videopost"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300dp"
+        android:layout_below="@+id/what"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/progresslinerlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabupload"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar31"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:theme="@style/AppTheme.WhiteAccent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Uploading File " />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statusssss1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabupload"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/progresslinerlayout"
+        android:background="@color/eyeslidebg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:background="@drawable/imgborder"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="@dimen/_27dp"
+                    android:layout_height="@dimen/_27dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/new_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/EyeCamera"
+                    android:textSize="@dimen/_10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:background="@drawable/imgborder"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/videoo"
+                    android:layout_width="@dimen/_27dp"
+                    android:layout_height="@dimen/_27dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/new_video" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/EyeVideo"
+                    android:textSize="@dimen/_10dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:background="@drawable/imgborder"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/gallery"
+                    android:layout_width="@dimen/_27dp"
+                    android:layout_height="@dimen/_27dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/new_album" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Eyegallery"
+                    android:textSize="@dimen/_10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/_70dp"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:background="@drawable/imgborder"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/postborder"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/postbtn"
+                        android:layout_width="@dimen/_70dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_55dp"
+                        android:gravity="center"
+                        android:text="@string/post"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/_13dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/Eyegallery"
+                        android:textSize="@dimen/_10dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

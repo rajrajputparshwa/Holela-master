@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registration_bg"
+    tools:context="com.holela.Activity.RegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--  <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/_130dp"
+            android:layout_height="@dimen/_130dp"
+            android:background="@drawable/profile_circle"
+            android:src="@drawable/lang_screen_logo_icon" />-->
+
+        <ImageView
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="@dimen/_100dp"
+            android:src="@drawable/lang_screen_logo_icon" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:src="@drawable/home_blue_logo"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_12dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_weight="3"
+                android:background="@color/phone_email"
+                android:gravity="center">
+
+
+                <com.holela.Controller.Edittext_open_semi_bold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10dp"
+                    android:id="@+id/checkmail"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/Enter_email"
+                    android:layout_gravity="center"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10dp"
+                    android:paddingTop="@dimen/_1dp"
+                    android:textSize="@dimen/_12sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rr_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_22dp"
+            android:layout_marginRight="@dimen/_22dp"
+            android:layout_marginTop="@dimen/_15dp"
+            android:background="@color/phone_email"
+            android:visibility="gone">
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_15dp">
+
+            <com.holela.Controller.Textview_open_semi_bold
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_3dp"
+                android:layout_weight="1"
+                android:background="@color/back"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_10dp"
+                android:paddingTop="@dimen/_10dp"
+                android:text="@string/Back"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_15sp" />
+
+            <com.holela.Controller.Textview_open_semi_bold
+                android:id="@+id/next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_3dp"
+                android:layout_weight="1"
+                android:background="@color/next"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_10dp"
+                android:paddingTop="@dimen/_10dp"
+                android:text="@string/Next"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_15sp" />
+
+        </LinearLayout>
+
+        <com.holela.Controller.Textview_open_light
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:text="@string/Receive_SMS"
+            android:textColor="@color/phone_email"
+            android:textSize="@dimen/_10sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

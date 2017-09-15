@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_marginBottom="@dimen/_10dp"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/userlayout"
+            android:layout_marginBottom="@dimen/_3dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_side_pic"
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_margin="@dimen/_5dp"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                android:src="@drawable/chat_scrren_pic"/>
+
+        <com.holela.Controller.Textview_open_regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi"
+                android:paddingLeft="@dimen/_10dp"
+                android:textColor="@color/Black"
+                android:id="@+id/usersidetext"
+                android:padding="@dimen/_10dp"
+                android:paddingRight="@dimen/_10dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:paddingTop="@dimen/_10dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_2dp"
+                android:textSize="@dimen/_18dp"/>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+            android:layout_width="@dimen/_250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mylayout"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:orientation="horizontal"
+    >
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/my_side"
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_5dp"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                android:src="@drawable/chat_scrren_pic"/>
+
+
+        <com.holela.Controller.Textview_open_regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:gravity="center"
+                android:padding="@dimen/_10dp"
+                android:background="@drawable/border"
+                android:paddingTop="@dimen/_10dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:paddingLeft="@dimen/_10dp"
+                android:id="@+id/mysidetext"
+                android:layout_gravity="center_horizontal"
+                android:layout_toLeftOf="@+id/my_side"
+                android:textColor="@color/Black"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/_10dp"
+                android:textSize="@dimen/_18dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

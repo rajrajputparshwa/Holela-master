@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/wholelayoutrelative"
+    >
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/contanerr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/your_story_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_5dp"
+
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/eyeeee"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:src="@drawable/holela_circle" />
+
+                <TextView
+                    android:id="@+id/eyetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Your_Story"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_8dp" />
+
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/story_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:scrollbars="none">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <!--    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/newsfeedpic"
+                        android:layout_width="@dimen/_40dp"
+                        android:layout_height="@dimen/_40dp"
+                        android:background="@color/White"
+                        android:layout_marginLeft="@dimen/_12dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:src="@drawable/chat_scrren_pic" />
+
+                    <com.holela.Controller.EditText_OpenSans_Regular
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/whatsonmind"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_10dp"
+                        android:gravity="center"
+                        android:textColorHint="@color/liketext"
+                        android:hint="@string/WhatsOnMind"/>
+
+                    <View
+                        android:layout_width="@dimen/_1dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_45dp"
+                        android:background="@color/Search_color"    />
+
+                    <ImageView
+                        android:layout_width="@dimen/_15dp"
+                        android:layout_height="@dimen/_15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_3dp"
+                        android:src="@drawable/profile_map_marker"/>
+
+                    <com.holela.Controller.Textview_open_regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CheckIn"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/_10dp"/>
+
+
+            </LinearLayout>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@color/your_story_bg" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/conta"
+            android:orientation="vertical">
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/container_items"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/White">
+
+
+                <ListView
+                    android:id="@+id/recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:listSelector="@android:color/transparent" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ddcon">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_40dp"
+            android:id="@+id/searchuserimage"
+            android:layout_height="@dimen/_40dp"
+            android:src="@drawable/chat_scrren_pic"/>
+
+        <TextView
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchusername"
+            android:textSize="@dimen/_20dp"
+            android:layout_marginLeft="@dimen/_30dp"
+            android:layout_gravity="center_vertical"/>
+
+
+
+
+    </LinearLayout>
+
+   <!-- <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"
+        android:layout_marginLeft="@dimen/_50dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/White"
+        android:id="@+id/followbtn"
+        android:background="@color/colorPrimary"
+        android:text="Follow"/>-->
+
+
+</LinearLayout>

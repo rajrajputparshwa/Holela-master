@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Black">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/auto_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            />
+        <com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar
+            android:id="@+id/segmented_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/_3dp"
+            android:visibility="gone"
+            app:container_color="@color/colorAccent"
+            app:fill_color="@color/colorPrimary" />
+
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/captured_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/desc"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/cancelll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_20dp" />
+
+
+            <TextView
+                android:id="@+id/next"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@drawable/cornerbtn"
+                android:gravity="center"
+                android:text="POST"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_13dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

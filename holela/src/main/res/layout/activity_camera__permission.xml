@@ -1,0 +1,119 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <LinearLayout
+        android:padding="@dimen/_5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <TextView
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_30dp"
+            android:text="@string/cancel"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/cancelll"
+            android:textSize="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:background="@drawable/border_layout"
+            android:fontFamily="monospace"
+            android:textColor="@color/Black"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_350dp"
+            android:layout_marginTop="@dimen/_7dp"
+            android:id="@+id/storyimage"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_360dp"
+            android:layout_marginTop="@dimen/_7dp"
+            android:scaleType="fitXY"
+            android:id="@+id/postimage"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/progresslinerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_alignParentStart="true">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:theme="@style/AppTheme.WhiteAccent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="Uploading File " />
+
+
+                <TextView
+                    android:id="@+id/textss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_alignParentBottom="true" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/statusssss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_30dp"
+            android:text="POST"
+            android:textStyle="bold"
+            android:layout_gravity="right"
+            android:id="@+id/postee"
+            android:textColor="@color/Black"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/cornerbtn"
+            android:textSize="@dimen/_13dp"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

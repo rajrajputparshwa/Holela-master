@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_border"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        <com.holela.Controller.Textview_open_semi_bold
+                android:id="@+id/tv_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12dp"
+                android:gravity="center"
+                android:padding="@dimen/_10dp"
+                android:text="@string/blockpermission"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_18sp" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            <com.holela.Controller.Textview_open_semi_bold
+                    android:id="@+id/con_ok"
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:layout_marginLeft="@dimen/_30dp"
+                    android:layout_marginRight="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@drawable/menu_round"
+                    android:gravity="center|center_horizontal"
+                    android:padding="@dimen/_10dp"
+                    android:text="@string/Ok"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_18sp" />
+
+
+            <com.holela.Controller.Textview_open_semi_bold
+                    android:id="@+id/con_cancel"
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:layout_marginLeft="@dimen/_30dp"
+                    android:layout_marginRight="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@drawable/menu_round"
+                    android:gravity="center|center_horizontal"
+                    android:padding="@dimen/_10dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+

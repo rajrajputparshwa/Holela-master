@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    tools:context="com.holela.Fragment.Searchview">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80C0C0C0"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5dp">
+
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+
+        <com.holela.Controller.MyRiad_Pro_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/like"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_5dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:textSize="@dimen/_18dp" />
+
+    </RelativeLayout>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5dp"
+        android:id="@+id/likess">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

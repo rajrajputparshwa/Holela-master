@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_40dp"
+            android:id="@+id/searchuserimage"
+            android:layout_height="@dimen/_40dp"
+            android:src="@drawable/chat_scrren_pic"/>
+
+        <TextView
+            android:layout_width="@dimen/_150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchusername"
+            android:textSize="@dimen/_20dp"
+            android:layout_marginLeft="@dimen/_30dp"
+            android:layout_gravity="center_vertical"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_20dp"
+                android:textSize="@dimen/_10dp"
+                android:id="@+id/unfollow"
+                android:background="@drawable/cornerbtn"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="@string/UnFollow"/>
+
+            <Button
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_20dp"
+                android:textSize="@dimen/_10dp"
+                android:id="@+id/follow"
+                android:visibility="gone"
+                android:background="@drawable/cornerbtn"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="@string/Follow"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/messages_sepeator"/>
+
+
+    <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/_40dp"
+         android:layout_marginLeft="@dimen/_50dp"
+         android:layout_gravity="center_vertical"
+         android:textColor="@color/White"
+         android:id="@+id/followbtn"
+         android:background="@color/colorPrimary"
+         android:text="Follow"/>-->
+
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/wholelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/noti_story_pic"
+            android:layout_width="@dimen/_37dp"
+            android:layout_height="@dimen/_37dp"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/chat_scrren_pic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:orientation="vertical">
+
+                <com.holela.Controller.MyRiad_Pro_Regular
+                    android:id="@+id/noti"
+                    android:layout_width="@dimen/_200dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="Test Liked you new post"
+                    android:textSize="@dimen/_13dp" />
+
+
+                <TextView
+                    android:id="@+id/caption"
+                    android:layout_width="@dimen/_170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/noti_time"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_15dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_20dp"
+                android:gravity="center"
+                android:text="2d"
+                android:textSize="@dimen/_8dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/story_photo_array"
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="@dimen/_40dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+        <!--   <ImageView
+               android:id="@+id/noti_post_pic"
+               android:layout_width="@dimen/_47dp"
+               android:layout_height="@dimen/_47dp"
+               android:layout_marginLeft="@dimen/_6dp"
+               android:layout_gravity="center_vertical"
+               android:layout_marginTop="@dimen/_5dp"
+               android:layout_marginBottom="@dimen/_5dp"
+               android:scaleType="fitXY"
+                />
+   -->
+
+    </LinearLayout>
+
+
+</RelativeLayout>

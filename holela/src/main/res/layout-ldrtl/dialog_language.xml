@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical">
+
+        <com.holela.Controller.Textview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:gravity="right"
+            android:text="@string/changelanguage"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_marginRight="@dimen/_20dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/ll_l_English"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/chk_l_english"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:src="@drawable/radio_unselected" />
+
+
+            <com.holela.Controller.Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="@string/English"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_l_Arabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/chk_l_arabic"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:src="@drawable/radio_unselected" />
+
+
+            <com.holela.Controller.Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10dp"
+                android:text="@string/Arabic"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.holela.Controller.Textview
+                android:id="@+id/okbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:layout_weight="1"
+                android:background="@drawable/menu_round"
+                android:gravity="center"
+                android:padding="@dimen/_10dp"
+                android:text="@string/Ok"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_20dp" />
+
+            <com.holela.Controller.Textview
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15dp"
+                android:layout_weight="1"
+                android:background="@drawable/menu_round"
+                android:gravity="center"
+                android:padding="@dimen/_10dp"
+                android:text="@string/cancel"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <VideoView
+        android:id="@+id/videoviewww"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:theme="@style/AppTheme.WhiteAccent" />
+
+
+    <ImageView
+        android:id="@+id/mystoryy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:id="@+id/userimage"
+            />
+
+        <TextView
+            android:id="@+id/storyusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_7dp"
+            android:text=""
+            android:textColor="#fff" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           >
+
+            <TextView
+                android:id="@+id/storytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7dp"
+                android:layout_marginTop="@dimen/_7dp"
+                android:text=""
+                android:textColor="@color/gray" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
