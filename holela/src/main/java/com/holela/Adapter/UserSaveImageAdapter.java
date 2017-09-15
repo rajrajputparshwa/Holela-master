@@ -73,7 +73,7 @@ public class UserSaveImageAdapter extends RecyclerView.Adapter<UserSaveImageAdap
         holder.Thumb.setVisibility(View.GONE);
         Glide.with(context)
                 .load(save_image_list.get(position).getImage())
-                .override(512, 512)
+                .override(200, 200)
                 .placeholder(R.color.White)
                 .into(holder.imageView);
 
@@ -90,7 +90,7 @@ public class UserSaveImageAdapter extends RecyclerView.Adapter<UserSaveImageAdap
         if (UserSaveAdapter.transfer == 1) {
             Glide.with(context)
                     .load(save_image_list.get(position).getThumb())
-                    .override(512, 512)
+                    .override(200, 200)
                     .placeholder(R.color.White)
                     .into(holder.Thumb);
 

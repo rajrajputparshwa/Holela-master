@@ -63,7 +63,7 @@ public class UserMediaImgAdapter extends RecyclerView.Adapter<UserMediaImgAdapte
         holder.imageView.setVisibility(View.VISIBLE);
 
         Glide.with(context)
-                .load(post_own_image_list.get(position).getImage()).override(70,70)
+                .load(post_own_image_list.get(position).getImage()).override(200,200)
                 .placeholder(R.color.White)
                 .into(holder.imageView);
 
@@ -90,7 +90,7 @@ public class UserMediaImgAdapter extends RecyclerView.Adapter<UserMediaImgAdapte
 
             Glide.with(context)
                     .load(post_own_image_list.get(position).getThumb())
-                    .override(70,70)
+                    .override(200,200)
                     .placeholder(R.color.White)
                     .into(holder.videoView);
 

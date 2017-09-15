@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/relacon">
 
-    <com.holela.Controller.MyNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -279,5 +279,5 @@
 
         </LinearLayout>
 
-    </com.holela.Controller.MyNestedScrollView>
+    </android.support.v4.widget.NestedScrollView>
 </RelativeLayout>

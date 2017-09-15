@@ -1,22 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.holela.Fragment.UserOwnPost">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context="com.holela.Fragment.UserOwnPost">
+        android:orientation="vertical">
 
-        <!-- TODO: Update blank fragment layout -->
-        <LinearLayout
+        <ListView
+            android:id="@+id/recycle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:nestedScrollingEnabled="true"></ListView>
 
-            <ListView
-                android:id="@+id/recycle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-            ></ListView>
-
-        </LinearLayout>
     </LinearLayout>
+</LinearLayout>

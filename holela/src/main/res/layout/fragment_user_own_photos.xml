@@ -25,6 +25,7 @@
         android:scrollbars="horizontal"
         android:layout_marginTop="@dimen/_2dp"
         android:numColumns="3"
+        android:nestedScrollingEnabled="true"
         android:id="@+id/list_grid">
 
     </GridView>

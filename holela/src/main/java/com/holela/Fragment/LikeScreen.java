@@ -62,8 +62,11 @@ public class LikeScreen extends Fragment {
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
                 if (keyEvent.getAction() == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
 
-                    Intent ii = new Intent(getActivity(), MainActivity.class);
-                    startActivity(ii);
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.remove(LikeScreen.this);
+                    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                    ft.commit();
 // handle back button's click listener
                 }
 
