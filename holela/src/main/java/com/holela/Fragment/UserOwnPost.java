@@ -3,36 +3,19 @@ package com.holela.Fragment;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
-import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.holela.Activity.MainActivity;
 import com.holela.Adapter.OwnPostAdapter;
-import com.holela.Controller.DialogBox;
-import com.holela.Controller.MyRiad_Pro_Regular;
-import com.holela.Models.ImageModel;
 import com.holela.Models.PostModel;
 import com.holela.Models.UserOwnPostImages;
 import com.holela.Models.UserOwnPostModel;
@@ -47,8 +30,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,31 +46,7 @@ public class UserOwnPost extends Fragment {
 
     static ArrayList<UserOwnPostModel> own_post_list = new ArrayList<>();
 
-    @Override
-    public void onResume() {
-        super.onResume();
 
-
-        if (getView() == null) {
-            return;
-        }
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if (keyEvent.getAction() == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
-// handle back button's click listener
-
-                    Intent ii = new Intent(getActivity(), MainActivity.class);
-                    startActivity(ii);
-
-
-                }
-                return false;
-            }
-        });
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

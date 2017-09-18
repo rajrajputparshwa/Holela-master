@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:scrollbars="horizontal"
             android:layout_marginTop="@dimen/_2dp"
+            android:nestedScrollingEnabled="true"
             android:numColumns="3"
             android:id="@+id/list_grid">
 

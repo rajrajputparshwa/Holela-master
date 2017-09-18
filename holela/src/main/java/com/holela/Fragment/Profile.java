@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.NestedScrollView;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +77,30 @@ public class Profile extends Fragment {
             R.drawable.fill_heart_3x,
             R.drawable.share_home_fill,
     };
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+
+        if (getView() == null) {
+            return;
+        }
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if (keyEvent.getAction() == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
+                    // handle back button's click listener
+                 Intent ii = new Intent(getActivity(),MainActivity.class);
+                 startActivity(ii);
+                }
+                return false;
+            }
+        });
+    }
 
 
     @Override

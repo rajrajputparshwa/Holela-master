@@ -40,7 +40,7 @@
         android:name=".VideoCompressorApplication"
         android:allowBackup="true"
         android:excludeFromRecents="true"
-        android:hardwareAccelerated="false"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/text_app_icon"
         android:label="@string/app_name"
         android:largeHeap="true"

@@ -58,31 +58,6 @@ public class UserOwnSaves extends Fragment {
     Context context;
 
     @Override
-    public void onResume() {
-        super.onResume();
-
-
-        if (getView() == null) {
-            return;
-        }
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if (keyEvent.getAction() == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
-// handle back button's click listener
-
-                    Intent ii = new Intent(getActivity(), MainActivity.class);
-                    startActivity(ii);
-
-
-                }
-                return false;
-            }
-        });
-    }
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment

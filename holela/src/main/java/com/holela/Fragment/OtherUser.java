@@ -31,6 +31,7 @@ import com.holela.Adapter.PostDetailAdapter;
 import com.holela.Controller.DialogBox;
 import com.holela.Controller.MyRiad_Pro_Regular;
 import com.holela.Controller.Textview_open_regular;
+import com.holela.Controller.WrapContentHeightViewPager;
 import com.holela.Models.PostDetailModel;
 import com.holela.R;
 import com.holela.Utils.Config;
@@ -55,7 +56,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class OtherUser extends Fragment {
 
     TabLayout tabLayout;
-    ViewPager viewPager;
+    WrapContentHeightViewPager viewPager;
     Context context;
     String myfollowing;
     NestedScrollView nestedScrollView;
@@ -101,8 +102,11 @@ public class OtherUser extends Fragment {
                    if (keyEvent.getAction() == KeyEvent.ACTION_UP && i == KeyEvent.KEYCODE_BACK) {
    // handle back button's click listener
 
-                       Intent ii = new Intent(getActivity(), MainActivity.class);
-                       startActivity(ii);
+                       FragmentManager fm = getFragmentManager();
+                       FragmentTransaction ft = fm.beginTransaction();
+                       ft.remove(OtherUser.this);
+                       ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                       ft.commit();
                    }
                    return false;
                }
@@ -117,7 +121,7 @@ public class OtherUser extends Fragment {
         context = getActivity();
         chat_icon = (ImageView) view.findViewById(R.id.chat_icon);
         circleImageView = (CircleImageView) view.findViewById(R.id.circleImageView);
-        viewPager = (ViewPager) view.findViewById(R.id.viewpagerr);
+        viewPager = (WrapContentHeightViewPager) view.findViewById(R.id.viewpagerr);
         containeree = (LinearLayout) view.findViewById(R.id.containere);
         headusername = (Textview_open_regular) view.findViewById(R.id.headusername);
         post = (MyRiad_Pro_Regular) view.findViewById(R.id.postcounts);

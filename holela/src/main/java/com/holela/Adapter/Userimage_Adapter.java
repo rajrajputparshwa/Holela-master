@@ -101,8 +101,11 @@ public class Userimage_Adapter extends RecyclerView.Adapter<Userimage_Adapter.My
                 i.putExtra("postid", postid);
                 i.putExtra("intent","profile");
                 context.startActivity(i);*/
+
             }
         });
+
+
 
 
 

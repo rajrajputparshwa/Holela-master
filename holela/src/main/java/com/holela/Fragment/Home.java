@@ -1,5 +1,9 @@
 package com.holela.Fragment;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +21,8 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -1356,6 +1362,10 @@ public class Home extends Fragment {
         ArrayList<PostModel> post_list = new ArrayList<>();
         FragmentManager manager;
         LinearLayout header;
+        private static final DecelerateInterpolator DECCELERATE_INTERPOLATOR
+                = new DecelerateInterpolator();
+        private static final AccelerateInterpolator ACCELERATE_INTERPOLATOR
+                = new AccelerateInterpolator();
 
 
         public PostAdapter(Context context, ArrayList<PostModel> post_list, FragmentManager manager) {
@@ -1415,6 +1425,8 @@ public class Home extends Fragment {
                 holder.alpha = (MyRiad_Pro_Regular) itemView.findViewById(R.id.alpha);
                 holder.suggestion = (RecyclerView) itemView.findViewById(R.id.suggestion);
                 holder.textss = (TextView) itemView.findViewById(R.id.textss);
+                holder.heartImageView = (ImageView) itemView.findViewById(R.id.heart);
+                holder.circleBackground = itemView.findViewById(R.id.circleBg);
                 holder.post_textusername = (MyRiad_Pro_Regular) itemView.findViewById(R.id.post_textusername);
                 // repostcount = (TextView) itemView.findViewById(R.id.repostcounts);
                 itemView.setTag(holder);
@@ -1600,10 +1612,13 @@ public class Home extends Fragment {
                             holder.heartlike.setImageDrawable(perk_active);
                             Log.e("Position", "" + position);
                             Log.e("Log", "Like");
+
                         }
 
 
                     } else if (post_list.get(position).getMylike().equals("1")) {
+
+
 
 
                         Log.e("Position", "" + position);
@@ -1728,19 +1743,30 @@ public class Home extends Fragment {
 
                     }
                     if (id.equals(pref_master.getUID())) {
-                        Intent intent = new Intent(context, Tab_Profile.class);
-                        intent.putExtra("fragmentcode", Config.Fragment_ID.MainFragment);
-                        intent.putExtra("scroll", 3);
-                        context.startActivity(intent);
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("id", userid);
+                        Profile fragment = new Profile();
+                        FragmentTransaction transaction = manager.beginTransaction();
+                        fragment.setArguments(bundle);
+                        transaction.replace(R.id.whole, fragment);
+                        transaction.addToBackStack(null);
+                        transaction.commit();
+
+
 
                     }
                     if (!id.equals(pref_master.getUID())) {
-                        Intent intent = new Intent(context, Tabs.class);
-                        intent.putExtra("fragmentcode", Config.Fragment_ID.Userother);
-                        intent.putExtra("id", id);
-                        pref_master.setOtherUserid(id);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                        context.startActivity(intent);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("id", userid);
+                        OtherUser fragment = new OtherUser();
+                        FragmentTransaction transaction = manager.beginTransaction();
+                        fragment.setArguments(bundle);
+                        transaction.replace(R.id.whole, fragment);
+                        transaction.addToBackStack(null);
+                        transaction.commit();
+                        pref_master.setOtherUserid(userid);
+
                     }
 
                 }
@@ -1826,8 +1852,10 @@ public class Home extends Fragment {
             RelativeLayout textlayout;
             RelativeLayout medialayout;
             String like = "";
+            ImageView heartImageView;
             String postuserid;
             RecyclerView recyclerView;
+            View circleBackground;
             ArrayList<SuggestionModel> suggestionModels = new ArrayList<>();
             Suggestion_adapter suggestion_adapter;
             RecyclerView suggestion;
@@ -1921,6 +1949,7 @@ public class Home extends Fragment {
             Connection.postconnection(url, params, Config.getHeaderParam(context), context, lis_res, lis_error);
 
         }
+
 
 
     }
