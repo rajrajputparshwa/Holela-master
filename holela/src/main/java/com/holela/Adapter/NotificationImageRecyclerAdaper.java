@@ -3,6 +3,7 @@ package com.holela.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +77,7 @@ public class NotificationImageRecyclerAdaper extends  RecyclerView.Adapter<Notif
             holder.play.setVisibility(View.VISIBLE);
             holder.imageView.setVisibility(View.GONE);
             holder.videoView.setVisibility(View.VISIBLE);
+            Log.e("Log","Log");
 
 
 
