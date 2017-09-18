@@ -94,10 +94,10 @@
                 android:layout_margin="@dimen/_10dp"
                 android:paddingTop="@dimen/_1dp"
                 android:paddingLeft="@dimen/_5dp"
-                android:text="Name"/>
+                android:text="@string/UserName"/>
 
             <com.holela.Controller.Edittext_open_semi_bold
-                android:id="@+id/profile_username"
+                android:id="@+id/profile_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -108,6 +108,36 @@
                 android:textSize="@dimen/_12sp" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:paddingTop="@dimen/_1dp"
+                android:paddingLeft="@dimen/_5dp"
+                android:text="Fullname"/>
+
+            <com.holela.Controller.Edittext_open_semi_bold
+                android:id="@+id/profile_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10dp"
+                android:cursorVisible="true"
+                android:hint="@string/Fullname_Signup"
+                android:paddingTop="@dimen/_1dp"
+                android:textSize="@dimen/_12sp" />
+
+        </LinearLayout>
+
+
+
+
 
 
         <LinearLayout

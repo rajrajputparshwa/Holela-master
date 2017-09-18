@@ -40,6 +40,7 @@ import com.holela.Adapter.Suggestion_adapter;
 import com.holela.Adapter.Userimage_Adapter;
 import com.holela.Controller.DialogBox;
 import com.holela.Controller.MyRiad_Pro_Regular;
+import com.holela.Controller.RecyclerItemDoubleClickListener;
 import com.holela.Models.ImageModel;
 import com.holela.Models.PostModel;
 import com.holela.Models.RepostImagemodel;
@@ -79,6 +80,7 @@ public class Home extends Fragment {
     public static int transfer;
     static int rr = 0;
     RecyclerView suggestion;
+    LinearLayout header;
     static ProgressDialog progressDialog;
     static PostAdapter postAdapter;
     static private boolean mLoadingItems;
@@ -175,6 +177,7 @@ public class Home extends Fragment {
         post = (ListView) v.findViewById(R.id.recycle);
         post_list = new ArrayList<>();
         pref_master = new Pref_Master(getActivity());
+        header = (LinearLayout) v.findViewById(R.id.header);
         eye = (ImageView) v.findViewById(R.id.eyeeee);
         eyetext = (TextView) v.findViewById(R.id.eyetext);
         container_items = (SwipeRefreshLayout) v.findViewById(R.id.container_items);
@@ -1348,10 +1351,11 @@ public class Home extends Fragment {
         LayoutInflater layoutInflater;
         ViewHolder holder;
         int go;
-        int value, value1;
+        int value, value1, recyclervalue;
         Drawable perk_active, perk_like, unfillsave, fillsave;
         ArrayList<PostModel> post_list = new ArrayList<>();
         FragmentManager manager;
+        LinearLayout header;
 
 
         public PostAdapter(Context context, ArrayList<PostModel> post_list, FragmentManager manager) {
@@ -1425,6 +1429,7 @@ public class Home extends Fragment {
             pref_master.setStr_user_posttime(post_list.get(position).getPostdatetime());
             holder.likecount.setText(post_list.get(position).getLike());
 
+
             holder.likecount.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -1435,14 +1440,14 @@ public class Home extends Fragment {
                     LikeScreen fragment = new LikeScreen();
                     FragmentTransaction transaction = manager.beginTransaction();
                     fragment.setArguments(bundle);
-                    transaction.replace(R.id.ddcon, fragment);
+                    transaction.replace(R.id.whole, fragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
 
-                    Log.e("HEllo","Hello");
+
+                    Log.e("HEllo", "Hello");
                 }
             });
-
 
 
             holder.commentcount.setText(post_list.get(position).getComment());
@@ -1570,6 +1575,42 @@ public class Home extends Fragment {
             holder.recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
             holder.recyclerView.setAdapter(userimage_adapter);
             holder.recyclerView.setNestedScrollingEnabled(false);
+
+            holder.recyclerView.addOnItemTouchListener(new RecyclerItemDoubleClickListener(context, new RecyclerItemDoubleClickListener.OnItemDoubleClickListener() {
+                @Override
+                public void onItemDoubleClick(View view, int positions) {
+                    if (post_list.get(position).getMylike().equals("0")) {
+
+                        if (recyclervalue == 1) {
+
+                            recyclervalue = 0;
+
+
+                        } else {
+
+
+                            int likcountsss = Integer.parseInt(post_list.get(position).getLike());
+                            int finalLikcountsss = likcountsss + 1;
+                            Like(context, postid, manager);
+                            postModel.setLike(Integer.toString(finalLikcountsss));
+                            postModel.setMylike("1");
+                            notifyDataSetChanged();
+                            recyclervalue = 1;
+                            holder.likecount.setText(post_list.get(position).getLike());
+                            holder.heartlike.setImageDrawable(perk_active);
+                            Log.e("Position", "" + position);
+                            Log.e("Log", "Like");
+                        }
+
+
+                    } else if (post_list.get(position).getMylike().equals("1")) {
+
+
+                        Log.e("Position", "" + position);
+                        Log.e("Log", "UnLike");
+                    }
+                }
+            }));
 
 
             if (position == 0) {
@@ -1727,7 +1768,6 @@ public class Home extends Fragment {
                     pref_master.setOtherUserid(userid);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
-
 
 
                 }

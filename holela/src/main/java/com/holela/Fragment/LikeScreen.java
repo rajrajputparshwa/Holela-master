@@ -44,6 +44,7 @@ public class LikeScreen extends Fragment {
     String userid, lo, postid;
     static ArrayList<FolowingListModel> following_list = new ArrayList<>();
     static FollowingAdapter followingAdapter;
+    MainFragment mainFragment;
     ImageView back;
 
     @Override
@@ -107,7 +108,10 @@ public class LikeScreen extends Fragment {
             }
         });
 
+
+
         following_list.clear();
+
 
         Likes(getActivity(), getFragmentManager(), userid, postid);
 

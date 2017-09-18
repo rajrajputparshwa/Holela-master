@@ -61,7 +61,7 @@ public class MainFragment extends Fragment {
     SearchMOdel searchMOdel;
     ArrayList<SearchMOdel> search_list = new ArrayList<>();
     TextView autoCompleteTextView;
-    LinearLayout header;
+    public LinearLayout header;
     int start, position;
     static int scroll;
     private static final int STORAGE_PERMISSION_CODE = 123;
